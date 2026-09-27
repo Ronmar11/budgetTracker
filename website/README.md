@@ -34,9 +34,23 @@ A button without a link shows **"Coming soon"** instead of a dead link, so the s
 - **Android APK (quickest):** `npx eas-cli@latest build --platform android --profile preview` produces an installable APK. Host it (for example as a GitHub release asset) and set `VITE_ANDROID_APK_URL`.
 - **Google Play:** `npx eas-cli@latest build --platform android --profile production`, then `npx eas-cli@latest submit --platform android`. The listing URL is `https://play.google.com/store/apps/details?id=com.spendify.app`.
 - **iOS:** needs an Apple Developer account. Run `npx eas-cli@latest build --platform ios --profile production`, then `npx eas-cli@latest submit --platform ios`. Use the public TestFlight link while in beta, then the App Store link.
-- Both stores ask for a **privacy policy URL**: use `https://<your-domain>/privacy.html`.
+- Both stores ask for a **privacy policy URL**: use `https://<your-domain>/privacy`.
 
 ## Deploy
+
+### Vercel (configured)
+
+`vercel.json` sets the build, clean URLs (`/privacy`), long-lived caching for hashed assets, and basic security headers.
+
+```bash
+npx vercel login          # once
+npx vercel                # from this folder: link the project + preview deploy
+npx vercel --prod         # production deploy
+```
+
+When linking, set the project's **Root Directory** to `website` if you deploy from the repo root or through Git. Add the `VITE_*` variables under *Project → Settings → Environment Variables*, then redeploy (they're read at build time).
+
+### Other hosts
 
 `dist/` is plain static files, so any static host works (Netlify, Vercel, Cloudflare Pages, GitHub Pages):
 

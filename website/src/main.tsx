@@ -6,7 +6,8 @@ import { createRoot } from 'react-dom/client';
 import { DownloadSection } from './components/DownloadSection';
 import { Footer } from './components/Footer';
 import { Nav } from './components/Nav';
-import { Faq, Features, Hero, HowItWorks, Privacy, Showcase } from './components/Sections';
+import { Features } from './components/Features';
+import { Faq, Hero, HowItWorks, Privacy, Showcase } from './components/Sections';
 import { detectPlatform } from './config';
 
 function LandingPage() {

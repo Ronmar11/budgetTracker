@@ -1,24 +1,16 @@
 
 import {
   Airplane,
-  Bell,
   Check,
   ChevronDown,
   Close,
   CloudOff,
-  DatabaseBackup,
   Fingerprint,
   HardDrive,
   Key,
   Lock,
-  PieChart,
-  PiggyBank,
   ServerOff,
-  ShieldCheck,
-  Tag,
   User,
-  Wallet,
-  WifiOff,
 } from './icons';
 import type { Platform } from '../config';
 import { HomeScreenMock, Phone, ReportsScreenMock, UnlockScreenMock } from './PhoneMockup';
@@ -74,46 +66,6 @@ export function Hero({ platform }: { platform: Platform }) {
             <Airplane className="h-5 w-5 text-primary" />
             <span className="text-sm font-semibold">Airplane mode? Still works.</span>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ── Features ────────────────────────────────────────────────────────────────
-
-const FEATURES = [
-  { icon: WifiOff, title: 'Works fully offline', body: 'Add expenses, check budgets and view reports with no connection at all. Changes sync automatically when you’re back online.' },
-  { icon: ShieldCheck, title: 'Private, with optional sync', body: 'Your records live in an encrypted database on your phone. Sign in with Google to back them up to your own private cloud account — or keep them on your device only.' },
-  { icon: Fingerprint, title: 'PIN, Face ID & fingerprint', body: 'Lock the app with a 6-digit PIN and unlock with biometrics. It auto-locks when you leave it in the background.' },
-  { icon: Bell, title: 'Budgets that warn you', body: 'Set an overall monthly budget or limits per category. Get a heads-up at 80% and when you go over.' },
-  { icon: PiggyBank, title: 'Savings goals', body: 'Track progress toward an emergency fund, a trip or a new laptop — and see at a glance if you’re on track or behind.' },
-  { icon: PieChart, title: 'Reports & charts', body: 'Spending by category, income vs. spending over six months, and month-by-month totals — all computed on your device.' },
-  { icon: Wallet, title: 'Cash, e-wallets & banks', body: 'Keep separate balances for cash, GCash, Maya and bank accounts. Every transaction updates the right one.' },
-  { icon: Tag, title: 'Your categories', body: 'Start with sensible defaults, then add, rename or remove categories with your own icons.' },
-  { icon: DatabaseBackup, title: 'Backup & export', body: 'Export to CSV for spreadsheets, or create a full backup file to move to a new phone. You choose where it goes.' },
-];
-
-export function Features() {
-  return (
-    <section id="features" aria-labelledby="features-title" className="border-t border-surface-container-high bg-surface-container-low py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionHeading
-          id="features-title"
-          eyebrow="Features"
-          title="Everything you need to stay on budget"
-          intro="A complete money tracker that never asks for your bank login and never needs a signal."
-        />
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map(({ icon: Icon, title, body }) => (
-            <article key={title} className="rounded-3xl border border-surface-container-high bg-surface-container p-6 shadow-card">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary-container/15 text-primary">
-                <Icon className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <h3 className="mt-5 text-lg font-bold">{title}</h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-on-surface-variant">{body}</p>
-            </article>
-          ))}
         </div>
       </div>
     </section>
@@ -197,7 +149,7 @@ export function Privacy() {
               </li>
             ))}
           </ul>
-          <a href="/privacy.html" className="mt-8 inline-flex text-sm font-semibold text-primary underline-offset-4 hover:underline">
+          <a href="/privacy" className="mt-8 inline-flex text-sm font-semibold text-primary underline-offset-4 hover:underline">
             Read the privacy policy →
           </a>
         </div>

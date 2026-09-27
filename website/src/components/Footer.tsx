@@ -13,7 +13,7 @@ export function Footer() {
           <a href="/#features" className="hover:text-on-surface">Features</a>
           <a href="/#faq" className="hover:text-on-surface">FAQ</a>
           <a href="/#download" className="hover:text-on-surface">Download</a>
-          <a href="/privacy.html" className="hover:text-on-surface">Privacy Policy</a>
+          <a href="/privacy" className="hover:text-on-surface">Privacy Policy</a>
         </nav>
       </div>
       <p className="mt-8 text-center text-xs text-on-surface-variant">
