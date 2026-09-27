@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="22 18 326 506">
+  <defs>
+    <linearGradient id="arm" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0" stop-color="#8CC063"/>
+      <stop offset="1" stop-color="#A7D08C"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#F7F6EE"/>
+      <stop offset="1" stop-color="#E4E1D1"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="1" y1="0.85" x2="0.15" y2="0">
+      <stop offset="0" stop-color="#E4E1D1"/>
+      <stop offset="0.45" stop-color="#C5E1A5"/>
+      <stop offset="1" stop-color="#A7D08C"/>
+    </linearGradient>
+    <linearGradient id="leafR" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#7DB855"/>
+      <stop offset="1" stop-color="#A7D08C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sprout -->
+  <path d="M212 188 C 212 170, 216 156, 224 144" fill="none" stroke="#7DB855" stroke-width="10" stroke-linecap="round"/>
+  <path d="M210 162 C 194 112, 150 92, 116 90 C 118 128, 156 166, 210 162 Z" fill="#6CAE4A"/>
+  <path d="M224 150 C 230 84, 276 40, 332 30 C 338 96, 294 148, 224 150 Z" fill="url(#leafR)"/>
+
+  <!-- S body: left curve, diagonal, lower bowl (dark) -->
+  <path d="M118 208 C 64 222, 50 288, 104 314 C 160 338, 262 336, 292 392 C 318 440, 280 470, 214 470 L 120 470"
+        fill="none" stroke="url(#body)" stroke-width="60" stroke-linecap="butt"/>
+
+  <!-- Tail: the ribbon continues and lightens as it curls up at the bottom left -->
+  <path d="M121 500 C 92 500, 62 490, 46 462 C 30 432, 44 394, 104 370 C 84 390, 76 412, 84 428 C 92 440, 104 440, 121 440 Z" fill="url(#tail)"/>
+
+  <!-- Top arm: light ribbon folding over the body -->
+  <path d="M84 184 C 140 154, 256 160, 326 264 C 300 250, 252 236, 182 236 C 142 236, 112 250, 98 270 C 70 252, 62 206, 84 184 Z" fill="url(#arm)"/>
+
+  <!-- Growth bars in the bowl -->
+  <g fill="#A7D08C">
+    <rect x="130" y="398" width="24" height="34" rx="8"/>
+    <rect x="168" y="382" width="24" height="50" rx="8"/>
+    <rect x="206" y="364" width="24" height="68" rx="8"/>
+  </g>
+</svg>
