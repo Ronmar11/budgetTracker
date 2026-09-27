@@ -1,0 +1,6 @@
+{
+  "name": "BudgetTrack",
+  "description": "Personal finance and budget tracking app for monitoring cash flow, net worth, and savings goals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
