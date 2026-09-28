@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { ThemeDark, ThemeLight, ThemeSystem } from './icons';
 
@@ -17,7 +17,9 @@ const read = (): Theme => {
 
 /** Cycles System → Light → Dark. The inline script in index.html applies the saved choice before first paint. */
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>(read);
+  // Pre-rendered as 'system'; the saved choice is read once the page loads (the inline script in the HTML already applied it).
+  const [theme, setTheme] = useState<Theme>('system');
+  useEffect(() => setTheme(read()), []);
 
   const cycle = () => {
     const next = ORDER[(ORDER.indexOf(theme) + 1) % ORDER.length];

@@ -8,6 +8,7 @@ interface ImportMetaEnv {
   readonly VITE_ANDROID_APK_SHA256?: string;
   readonly VITE_APP_VERSION?: string;
   readonly VITE_CONTACT_EMAIL?: string;
+  readonly VITE_GOVERNING_LAW?: string;
 }
 
 interface ImportMeta {

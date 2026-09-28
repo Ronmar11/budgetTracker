@@ -23,6 +23,9 @@ export const downloads = {
 
 export const contactEmail = env(import.meta.env.VITE_CONTACT_EMAIL);
 
+/** Jurisdiction named in the Terms of Service (“governed by the laws of …”). */
+export const GOVERNING_LAW = env(import.meta.env.VITE_GOVERNING_LAW) ?? 'the Republic of the Philippines';
+
 export const APP_NAME = 'Spendify';
 export const BRAND_TAGLINE = 'Track · Save · Grow';
 export const BRAND_SLOGAN = 'Small steps. Bigger tomorrow.';

@@ -13,6 +13,8 @@ npm run build      # typecheck + production build → dist/
 npm run preview    # serve dist/ locally
 ```
 
+The build also pre-renders every page to static HTML (`scripts/prerender.mjs`), and the browser then hydrates it. Crawlers that don't run JavaScript, such as Google's OAuth brand verification and link previews, need this to see the content and the privacy/terms links, so keep it in the build.
+
 ## Download links
 
 Download links are set at **build time** with environment variables. Copy `.env.example` to `.env`, or set the variables in your hosting provider's build settings.
@@ -25,7 +27,8 @@ Download links are set at **build time** with environment variables. Copy `.env.
 | `VITE_ANDROID_APK_URL` | Direct APK download (optional) |
 | `VITE_ANDROID_APK_SHA256` | Checksum shown next to the APK (optional) |
 | `VITE_APP_VERSION` | Version label (optional) |
-| `VITE_CONTACT_EMAIL` | Contact address in the privacy policy (**set this before submitting to the stores**) |
+| `VITE_CONTACT_EMAIL` | Contact address in the privacy policy and terms (**set this before submitting to the stores**) |
+| `VITE_GOVERNING_LAW` | Jurisdiction in the terms of service (default: "the Republic of the Philippines") |
 
 A button without a link shows **"Coming soon"** instead of a dead link, so the site can go live before the store listings do. Visitors on iPhone or Android see their own store first; desktop visitors get a QR code that opens the page on their phone.
 
